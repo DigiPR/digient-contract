@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1n8e9t6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="3.7.3">
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" xmlns:di="http://www.omg.org/spec/DD/20100524/DI" xmlns:camunda="http://camunda.org/schema/1.0/bpmn" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bioc="http://bpmn.io/schema/bpmn/biocolor/1.0" id="Definitions_1n8e9t6" targetNamespace="http://bpmn.io/schema/bpmn" exporter="Camunda Modeler" exporterVersion="4.8.0">
   <bpmn:collaboration id="Collaboration_0rufxby">
     <bpmn:participant id="Participant_04jh62j" name="Contract Management (Contract µS)" processRef="Process_Contract" />
     <bpmn:participant id="Participant_1v7p97d" name="Contract Decision - Contract Management (Contract µS)" processRef="Process_ContractDecision" />
   </bpmn:collaboration>
-  <bpmn:process id="Process_Contract" name="Contract" isExecutable="true">
+  <bpmn:process id="Process_Contract" name="Contract" isExecutable="true" camunda:isStartableInTasklist="false">
     <bpmn:sendTask id="Activity_03swqlz" name="Send rejection" camunda:type="external" camunda:topic="SendRejection">
       <bpmn:incoming>Flow_1ijtlwq</bpmn:incoming>
       <bpmn:outgoing>Flow_013ghv2</bpmn:outgoing>
@@ -61,7 +61,7 @@
     <bpmn:sequenceFlow id="Flow_1bkluwi" sourceRef="Event_1tdy25s" targetRef="Event_1nsurgm" />
     <bpmn:sequenceFlow id="Flow_1jucwd4" sourceRef="Event_1y4211d" targetRef="Activity_0t34h35" />
   </bpmn:process>
-  <bpmn:process id="Process_ContractDecision" name="Contract Decision" isExecutable="true">
+  <bpmn:process id="Process_ContractDecision" name="Contract Decision" isExecutable="true" camunda:isStartableInTasklist="false">
     <bpmn:endEvent id="Event_133vopm" name="Application accepted">
       <bpmn:incoming>Flow_1izyt0t</bpmn:incoming>
       <bpmn:incoming>Flow_0u7xoh5</bpmn:incoming>
