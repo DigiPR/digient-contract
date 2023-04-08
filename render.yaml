@@ -11,7 +11,10 @@ services:
     envVars:
       - key: CAMUNDA_REST_URL # Imported from Heroku app
         value: https://digibp.herokuapp.com/engine-rest
+        sync: false
       - key: CAMUNDA_TENANT_ID # Imported from Heroku app
         value: showcase
+        sync: false
       - key: CLOUDAMQP_URL # Imported from Heroku app
+        value: amqps://
         sync: false
