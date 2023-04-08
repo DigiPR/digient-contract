@@ -3,7 +3,7 @@
 # Schema documented at https://render.com/docs/yaml-spec
 services:
   - type: web # valid values: https://render.com/docs/yaml-spec#type
-    name: digient-contract-am
+    name: digient-contract
     env: docker # valid values: https://render.com/docs/yaml-spec#environment
     dockerfilePath: Dockerfile.render
     plan: free # optional; defaults to starter
@@ -14,4 +14,4 @@ services:
       - key: CAMUNDA_TENANT_ID # Imported from Heroku app
         value: showcase
       - key: CLOUDAMQP_URL # Imported from Heroku app
-        value: amqps://
+        sync: false
